@@ -6,7 +6,6 @@
     margin-right: auto;
     background-color: $footer-background-color;
 }
-
 .container-footer {
     margin-right: 70px;
     margin-left: 215px;
@@ -26,14 +25,7 @@
 .contact__item:not(:last-child) {
     margin-bottom: 9px;
 }
-.contact__item {
-    color: $primary-background-color;
-    @include transition(color);
-    &:hover,
-    &:focus {
-        color: $accent-color;
-    }
-}
+
 .contact__link {
     color: rgba(255, 255, 255, 0.6);
     @include transition(color);
@@ -41,6 +33,10 @@
     &:focus {
         color: $accent-color;
     }
+}
+.contact__item {
+    @extend .contact__link;
+    color: $primary-background-color;
 }
 .join {
     padding-top: 72px;
@@ -90,11 +86,7 @@
     padding-bottom: 94px;
 }
 .subscribe__title {
-    color: $primary-background-color;
-    font-weight: 700;
-    line-height: 1.14;
-    font-size: 14px;
-    text-transform: uppercase;
+    @extend .join__title;
 }
 .subscribe__data {
     display: block;
@@ -110,7 +102,6 @@
     font-size: 16px;
     line-height: 1.25;
     padding-left: 16px;
-    margin-top: 20px;
 }
 
 .button__subscribe {
@@ -120,7 +111,7 @@
 
     fill: $primary-background-color;
 
-    margin-top: 110px;
+    margin-top: 108px;
     margin-bottom: 94px;
     margin-left: 12px;
 }

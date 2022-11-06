@@ -2,15 +2,7 @@
     padding-bottom: 94px;
 }
 .deals__title {
-    color: $title-text-color;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-
-    margin-bottom: 50px;
-    padding-left: auto;
-    padding-right: auto;
+    @extend %section__title;
 }
 .deals__list {
     display: flex;

@@ -41,9 +41,10 @@
 .site-nav__list {
     display: flex;
 }
-.site-nav__item:not(:last-child) {
+.site-nav__list :not(:last-child) {
     margin-right: 50px;
 }
+
 .site-nav__link {
     display: flex;
     position: relative;
@@ -58,21 +59,21 @@
     &:focus {
         color: $accent-color;
     }
-}
-.site-nav__link::after {
-    content: '';
-    position: absolute;
-    display: flex;
-    left: 0;
-    bottom: 0;
+    &::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        bottom: 0;
 
-    height: 4px;
-    width: 100%;
-    border-radius: 4px;
-    background-color: $accent-color;
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
 
-    opacity: 0;
-    @include transition(opacity);
+        opacity: 0;
+        @include transition(opacity);
+    }
 }
 .site-nav__item:hover .site-nav__link::after,
 .site-nav__item:focus .site-nav__link::after {
@@ -80,19 +81,19 @@
 }
 .site-nav__link--current {
     color: $accent-color;
-}
-.site-nav__link--current::after {
-    content: '';
-    position: absolute;
-    display: flex;
-    left: 0;
-    bottom: 0;
-    opacity: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
 
-    height: 4px;
-    width: 100%;
-    border-radius: 4px;
-    background-color: $accent-color;
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
+    }
 }
 .auth-nav {
     display: flex;
